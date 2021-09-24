@@ -2,8 +2,11 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
+use Illuminate\Support\ServiceProvider;
+use Laravel\Fortify\Contracts\LoginResponse;
+
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -13,7 +16,16 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->instance(LoginResponse::class, new class implements LoginResponse {
+            public function toResponse($request)
+            {
+                return $request->wantsJson()
+                    ? response()->json(['two_factor' => false])
+                    : redirect()->intended(route('alien-worker.home',[],false));
+                    // : redirect()->intended(Fortify::redirects('login'));
+                // return redirect(route('alien-worker.home'));
+            }
+        });
     }
 
     /**

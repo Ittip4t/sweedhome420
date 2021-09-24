@@ -26,3 +26,4 @@ Homestead.json
 docker-compose.yml
 docker-compose/
 Dockerfiles/
+.vscode
