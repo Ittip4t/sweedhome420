@@ -5,7 +5,7 @@
             <div class="col-11 col-md-8 col-lg-6">
                     <div  style="font-size: 22px;margin-bottom:1.5rem;">
                         <a class="navbar-brand weed"
-                        href="{{ route('home') }}"><b>S</b><b>w</b><b>ee</b><b>t</b><b>d</b>Bush<span><b>4</b><b>:</b><b>2</b><b>0</b></span></a>
+                        href="{{ route('home') }}"><b>S</b><b>w</b><b>ee</b><b>t</b><b>d</b>Home<span><b>4</b><b>:</b><b>2</b><b>0</b></span></a>
                        </div>
                 
                     

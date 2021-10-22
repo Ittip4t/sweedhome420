@@ -11,9 +11,10 @@
 // Bootstrap
 @import "~bootstrap/scss/bootstrap.scss";
 
-body{
+body {
     font-size: 16px;
 }
+
 .navbar-light {
     .navbar-nav {
         .nav-link {
@@ -104,7 +105,9 @@ a.navbar-brand.weed {
     margin-top: 0;
     margin-bottom: 0;
     color: rgba($dark, 1);
-    &::before ,&.logo::before{
+
+    &::before,
+    &.logo::before {
         content: 'moke';
         visibility: hidden;
         position: absolute;
@@ -115,72 +118,87 @@ a.navbar-brand.weed {
         font-weight: bold;
         color: rgba(#620d95, 1);
     }
+
     &.logo::before {
         top: 6px;
         left: 16px;
     }
 
-    &:hover::before,.logo:hover::before{
+    &:hover::before,
+    .logo:hover::before {
         visibility: visible;
     }
 
-    &::after ,&.logo::after {
+    &::after,
+    &.logo::after {
         content: '204';
         display: inline-block;
         position: absolute;
         top: 8px;
-        right: -47px;  
+        right: -56px;
         transform: rotate(42deg);
         font-size: .6em;
         font-weight: bold;
         clear: both;
     }
+
     &.logo::after {
         top: 5px;
-    right: -6px;
+        right: -11px;
     }
 
-    &:hover::after,&.logo:hover::after  {
+    &:hover::after,
+    &.logo:hover::after {
         content: "";
         visibility: hidden;
         clear: both;
     }
 
 
-    &>b:nth-child(1), &.logo>b:nth-child(1) {
+    &>b:nth-child(1),
+    &.logo>b:nth-child(1) {
         color: rgba(#620d95, 1);
         font-size: 1.2em;
         font-style: italic;
     }
-    &>b:nth-child(3),&.logo>b:nth-child(3)  {
+
+    &>b:nth-child(3),
+    &.logo>b:nth-child(3) {
         color: rgba(#458914, 1);
     }
 
-    &>b:nth-child(4),&.logo>b:nth-child(4)  {
+    &>b:nth-child(4),
+    &.logo>b:nth-child(4) {
         display: inline-block;
     }
 
-    &>b:nth-child(5),&.logo>b:nth-child(5)  {
+    &>b:nth-child(5),
+    &.logo>b:nth-child(5) {
         display: none;
     }
 
-    &>span, &.logo>span {
+    &>span,
+    &.logo>span {
         display: none;
     }
 
     &:hover,
-    &:focus, 
+    &:focus,
     .logo:hover,
     .logo:focus {
-        &>b:nth-child(4),&.logo>b:nth-child(4) {
+
+        &>b:nth-child(4),
+        &.logo>b:nth-child(4) {
             display: none;
         }
 
-        &>b:nth-child(5) ,&.logo>b:nth-child(5){
+        &>b:nth-child(5),
+        &.logo>b:nth-child(5) {
             display: inline-block;
         }
 
-        &>span , &.logo>span{
+        &>span,
+        &.logo>span {
             display: block;
             position: absolute;
             font-size: .8em;
@@ -191,11 +209,14 @@ a.navbar-brand.weed {
             padding: 0 .5em 0 0.4em;
             box-shadow: 5px 4px #80509c;
         }
-        &.logo>span{
+
+        &.logo>span {
             top: 0.6em;
             right: 0.1em;
         }
-        &>span>b,&.logo>span>b {
+
+        &>span>b,
+        &.logo>span>b {
             &:nth-child(1) {
                 color: rgba(#80509c, 1);
             }
@@ -229,50 +250,54 @@ a.navbar-brand.weed {
     font-size: 1.6em;
     font-weight: bold;
 }
-.login-forgot{
+
+.login-forgot {
     display: flex;
     flex: 1 1 100%;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
 
-.weed-border-bottom{
+.weed-border-bottom {
     border-bottom: 1px solid;
-    border-image: linear-gradient(
-45deg,#9f00c5,#4db700) 10;
+    border-image: linear-gradient(45deg, #9f00c5, #4db700) 10;
 }
+
 @include media-breakpoint-down(sm) {
     .weed-bg {
         height: 128px;
         width: 93%;
         margin-bottom: 1.2em;
     }
-    .login-forgot{
+
+    .login-forgot {
         flex: 0;
         flex-direction: column;
     }
-    .weed.show{
+
+    .weed.show {
         position: relative;
     }
-    .weed > .navbar-nav{
+
+    .weed>.navbar-nav {
         position: absolute;
-    background-color: #f9fafa;
-    border: 1.5px solid #798968;
-    border-radius: .2rem;
-    z-index: 1;
-    padding-right: 5rem;
-    padding-left: .6rem;
-    right: 0px;
-    box-shadow: 1px 1px 4px #858d8b75;
+        background-color: #f9fafa;
+        border: 1.5px solid #798968;
+        border-radius: .2rem;
+        z-index: 1;
+        padding-right: 5rem;
+        padding-left: .6rem;
+        right: 0px;
+        box-shadow: 1px 1px 4px #858d8b75;
     }
-   
+
 }
 
 @include media-breakpoint-up(sm) {
     .container-md.weed {
-     
-        & > .dropdown-menu.dropdown-menu-end{
-          display: none;
+
+        &>.dropdown-menu.dropdown-menu-end {
+            display: none;
         }
-      }
+    }
 }
