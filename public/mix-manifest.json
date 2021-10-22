@@ -1,4 +1,11 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/js/admin/scripts.js": "/js/admin/scripts.js",
+    "/js/admin/datatables-simple-demo.js": "/js/admin/datatables-simple-demo.js",
+    "/js/admin/assets/chart-area-demo.js": "/js/admin/assets/chart-area-demo.js",
+    "/js/admin/assets/chart-bar-demo.js": "/js/admin/assets/chart-bar-demo.js",
+    "/js/admin/assets/chart-pie-demo.js": "/js/admin/assets/chart-pie-demo.js",
+    "/js/admin/assets/datatables-demo.js": "/js/admin/assets/datatables-demo.js",
+    "/css/app.css": "/css/app.css",
+    "/css/admin/styles.css": "/css/admin/styles.css"
 }

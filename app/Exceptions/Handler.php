@@ -37,5 +37,15 @@ class Handler extends ExceptionHandler
         $this->reportable(function (Throwable $e) {
             //
         });
+
+        $this->renderable(function (\Spatie\Permission\Exceptions\UnauthorizedException $e, $request) {
+            if (! $request->expectsJson()) {
+                return redirect()->route('home');
+            }
+            return response()->json([
+                'responseMessage' => "Authorization roles require : ".implode(', ',$e->getRequiredRoles()),
+                'responseStatus'  => $e->getStatusCode(),
+            ]);
+        });
     }
 }
