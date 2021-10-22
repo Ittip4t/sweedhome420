@@ -11361,7 +11361,8 @@ a.navbar-brand.weed.logo::before {
   top: 6px;
   left: 16px;
 }
-a.navbar-brand.weed:hover::before, a.navbar-brand.weed .logo:hover::before {
+a.navbar-brand.weed:hover::before,
+a.navbar-brand.weed .logo:hover::before {
   visibility: visible;
 }
 a.navbar-brand.weed::after, a.navbar-brand.weed.logo::after {
@@ -11369,7 +11370,7 @@ a.navbar-brand.weed::after, a.navbar-brand.weed.logo::after {
   display: inline-block;
   position: absolute;
   top: 8px;
-  right: -47px;
+  right: -56px;
   transform: rotate(42deg);
   font-size: 0.6em;
   font-weight: bold;
@@ -11377,7 +11378,7 @@ a.navbar-brand.weed::after, a.navbar-brand.weed.logo::after {
 }
 a.navbar-brand.weed.logo::after {
   top: 5px;
-  right: -6px;
+  right: -11px;
 }
 a.navbar-brand.weed:hover::after, a.navbar-brand.weed.logo:hover::after {
   content: "";
